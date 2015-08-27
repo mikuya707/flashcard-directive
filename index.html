@@ -20,7 +20,7 @@
         <button ng-repeat="category in categories" class="category-button" ng-click="getCategoryCards(category)" ng-class="{ active: category === selectedCategory }">{{ category }}</button>
         <button class="category-button" ng-click="getCategoryCards()" ng-class="{ active: selectedCategory === undefined }">All</button>
       </div>
-        <flash-card></flash-card>
+        <flash-card card="flashCard" ng-repeat="flashCard in flashCards"></flash-card>
      
     	<script src="angular.js"></script>
     	<script src="app.js"></script>
@@ -29,5 +29,6 @@
       <script src="/factories/flashcard.factory.js"></script>
       <script src="/factories/score.factory.js"></script>
       <script src="/directives/loader/loader.js"></script>
+      <script src="/directives/flashcards/flashcards.js"></script>
     </body>
 </html>
