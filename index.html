@@ -17,8 +17,8 @@
     <div ng-controller="MainController">
         <loader ng-hide="loaded"></loader>
     	<div class="cats">
-        <button ng-repeat="category in categories" class="category-button" ng-click="getCategoryCards(category)" ng-class="{ active: category === selectedCategory }">{{ category }}</button>
-        <button class="category-button" ng-click="getCategoryCards()" ng-class="{ active: selectedCategory === undefined }">All</button>
+        <button border-on-hover ng-repeat="category in categories" class="category-button" ng-click="getCategoryCards(category)" ng-class="{ active: category === selectedCategory }">{{ category }}</button>
+        <button border-on-hover class="category-button" ng-click="getCategoryCards()" ng-class="{ active: selectedCategory === undefined }">All</button>
       </div>
         <flash-card card="flashCard" ng-repeat="flashCard in flashCards"></flash-card>
      
@@ -30,5 +30,6 @@
       <script src="/factories/score.factory.js"></script>
       <script src="/directives/loader/loader.js"></script>
       <script src="/directives/flashcards/flashcards.js"></script>
+      <script src="/directives/mouseenter.js"></script
     </body>
 </html>
